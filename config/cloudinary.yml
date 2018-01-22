@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: djpyc65c1
+  api_key: '286139982914787'
+  api_secret: IJ_ypqfOqHkVhnpcb3bJUFYZXH8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: djpyc65c1
+  api_key: '286139982914787'
+  api_secret: IJ_ypqfOqHkVhnpcb3bJUFYZXH8
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: djpyc65c1
+  api_key: '286139982914787'
+  api_secret: IJ_ypqfOqHkVhnpcb3bJUFYZXH8
+  enhance_image_tag: true
+  static_image_support: false

@@ -1,0 +1,2 @@
+module MainauthorityHelper
+end

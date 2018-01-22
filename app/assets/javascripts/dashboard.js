@@ -1,0 +1,10 @@
+//= require rails-ujs
+//= require turbolinks
+//= require dashboard/js/jquery-3.2.1.min
+//= require dashboard/js/popper.js/umd/popper.min
+//= require dashboard/js/bootstrap.min
+//= require dashboard/js/jquery.cookie
+//= require dashboard/js/chart.js/Chart.min
+//= require dashboard/js/jquery.validate.min
+//= require dashboard/js/charts-home
+//= require dashboard/js/front

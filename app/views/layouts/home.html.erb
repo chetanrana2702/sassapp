@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ror Prototype - Merchant</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'pagehome', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'pagehome', 'data-turbolinks-track': 'reload' %>
+    <!-- Favicon -->
+  </head>
+
+  <body>
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <div class="colorlib-load"></div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header_area animated">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <!-- Menu Area Start -->
+                <div class="col-12 col-lg-10">
+                    <div class="menu_area">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <!-- Logo -->
+                            <a class="navbar-brand" href="#">Cu.</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                            <!-- Menu Area -->
+                            <div class="collapse navbar-collapse" id="ca-navbar">
+                                <ul class="navbar-nav ml-auto" id="nav">
+                                    <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#screenshot">Screenshot</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                                </ul>
+                                <div class="sing-up-button d-lg-none">
+                                    <%= link_to "Sign Up", signup_new_tenant_signup_index_path %>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Signup btn -->
+                <div class="col-12 col-lg-2">
+                    <div class="sing-up-button d-none d-lg-block">
+                        <%= link_to "Sign Up", signup_new_tenant_signup_index_path %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    
+    <%= yield %>
+    
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-social-icon text-center section_padding_70 clearfix" id="footer">
+        <!-- footer logo -->
+        <div class="footer-text">
+            <h2>Ca.</h2>
+        </div>
+        <!-- social icon-->
+        <div class="footer-social-icon">
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="active fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+        </div>
+        <div class="footer-menu">
+            <nav>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Foooter Text-->
+        <div class="copyright-text">
+            <!-- ***** Removing this text is now allowed! This template is licensed under CC BY 3.0 ***** -->
+            <p>Copyright ©2017 Ca. Designed by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+        </div>
+    </footer>
+    <!-- ***** Footer Area Start ***** -->
+
+    <script type="text/javascript">
+    (function($) {
+        "use strict";
+
+        // [ JS Active Code Index ]
+
+        // :: 1.0 Owl Carousel Active Code
+        // :: 2.0 Slick Active Code
+        // :: 3.0 Footer Reveal Active Code
+        // :: 4.0 ScrollUp Active Code
+        // :: 5.0 CounterUp Active Code
+        // :: 6.0 onePageNav Active Code
+        // :: 7.0 Magnific-popup Video Active Code
+        // :: 8.0 Sticky Active Code
+        // :: 9.0 Preloader Active code
+
+        // :: 1.0 Owl Carousel Active Code
+        if ($.fn.owlCarousel) {
+          $(".welcome_slides").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            smartSpeed: 1500,
+            nav: true,
+            navText: [
+              "<i class='pe-7s-angle-left'</i>",
+              "<i class='pe-7s-angle-right'</i>"
+            ]
+          });
+          $(".app_screenshots_slides").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            smartSpeed: 800,
+            margin: 30,
+            center: true,
+            dots: true,
+            responsive: {
+              0: {
+                items: 1
+              },
+              480: {
+                items: 3
+              },
+              992: {
+                items: 5
+              }
+            }
+          });
+        }
+
+        // :: 2.0 Slick Active Code
+        if ($.fn.slick) {
+          $(".slider-for").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 500,
+            arrows: false,
+            fade: true,
+            asNavFor: ".slider-nav"
+          });
+          $(".slider-nav").slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            speed: 500,
+            asNavFor: ".slider-for",
+            dots: true,
+            centerMode: true,
+            focusOnSelect: true,
+            slide: "div",
+            autoplay: true,
+            centerMode: true,
+            centerPadding: "30px",
+            mobileFirst: true,
+            prevArrow: '<i class="fa fa-angle-left"></i>',
+            nextArrow: '<i class="fa fa-angle-right"></i>'
+          });
+        }
+
+        // :: 3.0 Footer Reveal Active Code
+        if ($.fn.footerReveal) {
+          $("footer").footerReveal({
+            shadow: true,
+            shadowOpacity: 0.3,
+            zIndex: -101
+          });
+        }
+
+        // :: 4.0 ScrollUp Active Code
+        if ($.fn.scrollUp) {
+          $.scrollUp({
+            scrollSpeed: 1500,
+            scrollText: '<i class="fa fa-angle-up"></i>'
+          });
+        }
+
+        // :: 5.0 CounterUp Active Code
+        if ($.fn.counterUp) {
+          $(".counter").counterUp({
+            delay: 10,
+            time: 2000
+          });
+        }
+
+        // :: 6.0 onePageNav Active Code
+        if ($.fn.onePageNav) {
+          $("#nav").onePageNav({
+            currentClass: "active",
+            scrollSpeed: 2000,
+            easing: "easeOutQuad"
+          });
+        }
+
+        // :: 7.0 Magnific-popup Video Active Code
+        if ($.fn.magnificPopup) {
+          $(".video_btn").magnificPopup({
+            disableOn: 0,
+            type: "iframe",
+            mainClass: "mfp-fade",
+            removalDelay: 160,
+            preloader: true,
+            fixedContentPos: false
+          });
+        }
+
+        $('a[href="#"]').click(function($) {
+          $.preventDefault();
+        });
+
+        var $window = $(window);
+
+        if ($window.width() > 767) {
+          new WOW().init();
+        }
+
+        // :: 8.0 Sticky Active Code
+        $window.on("scroll", function() {
+          if ($window.scrollTop() > 48) {
+            $(".header_area").addClass("sticky slideInDown");
+          } else {
+            $(".header_area").removeClass("sticky slideInDown");
+          }
+        });
+
+        // :: 9.0 Preloader Active code
+        $window.on("load", function() {
+          $("#preloader").fadeOut("slow", function() {
+            $(this).remove();
+          });
+        });
+      })(jQuery); 
+
+    </script>
+  </body>
+</html>

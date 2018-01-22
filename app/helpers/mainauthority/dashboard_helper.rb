@@ -1,0 +1,2 @@
+module Mainauthority::DashboardHelper
+end
